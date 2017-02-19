@@ -1,60 +1,47 @@
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+@font-face{font-family:'Calluna';
+  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');
 }
 
 #columns {
+  font-family: Calluna;
   padding-top: 5vh;
+  /* colum개수를 지정할 수도 있음. */
   column-width: 350px;
+  column-gap: 15px;
+  max-width: 1100px;
+  width: 90%;
+  margin: 50px auto;
 }
 
 #columns figure {
   display: inline-block;
+  border: 1px solid rgba(0,0,0,0.2);
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  transition: opacity .4s ease-in-out;
 }
 
-#main {
-  max-width: 600px;
-  margin: 0 auto;
+#columns figure:hover {
+  background-color: snow;
 }
 
-.simple {
-  max-width: 500px;
-  height: 20vh;
-  margin: 5vh auto;
-  border: 1px burlywood solid;
+#columns figure img {
+  width: 100%;
 }
 
-.fancy {
-  max-width: 500px;
-  height: 20vh;
-  margin: 5vh auto;
-  border: 1px burlywood solid;
-  padding: 50px;
+#columns figure figcaption {
+  border-top: 1px solid rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-top: 11px;
 }
 
-.fixed {
-  height: 10vh;
-  width: 20vw;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  background-color: white;
+div#columns:hover figure:not(:hover) {
+	opacity: 0.4;
 }
 
-.relative {
-  position: relative;
-  max-width: 500px;
-  height: 20vh;
-  margin: 5vh auto;
-  border: 1px burlywood solid;  
-}
-
-.absolute {
-  position: absolute;
-  width: 200px;
-  height: 30px;
-  right: 0;
-  bottom: 20;
-  border: 2px greenyellow solid;
+@media screen and (max-width: 750px) {
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100% }
 }
