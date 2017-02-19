@@ -1,0 +1,60 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#columns {
+  padding-top: 5vh;
+  column-width: 350px;
+}
+
+#columns figure {
+  display: inline-block;
+}
+
+#main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.simple {
+  max-width: 500px;
+  height: 20vh;
+  margin: 5vh auto;
+  border: 1px burlywood solid;
+}
+
+.fancy {
+  max-width: 500px;
+  height: 20vh;
+  margin: 5vh auto;
+  border: 1px burlywood solid;
+  padding: 50px;
+}
+
+.fixed {
+  height: 10vh;
+  width: 20vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+}
+
+.relative {
+  position: relative;
+  max-width: 500px;
+  height: 20vh;
+  margin: 5vh auto;
+  border: 1px burlywood solid;  
+}
+
+.absolute {
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  right: 0;
+  bottom: 20;
+  border: 2px greenyellow solid;
+}
